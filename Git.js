@@ -29,6 +29,7 @@ const UCs = [
 const feBranch = "master";
 const masterBranch = "main";
 let repositoryFolder = "";
+let stashMsg=undefined
 // Ask the user for the UC number
 const desiredNumber = prompt("You want to :");
 /* The line `const ucData = desiredNumber.split(" ");` is splitting the `desiredNumber` string into an
@@ -86,19 +87,20 @@ function switchPullMerge(repo) {
 		subsequent Git commands to be executed in the correct directory, ensuring that the Git operations
 		are performed on the correct repository. */
 		process.chdir(`../${repo}`);
-		execSync(`git stash`);
+		stashMsg=execSync(`git stash`,{encoding: 'utf8'});
+		console.log(stashMsg);
 		execSync(`git checkout ${masterBranch}`);
 		execSync(`git pull origin ${masterBranch}`);
 		execSync(`git checkout ${feBranch}`);
 		execSync(`git merge ${masterBranch}`);
-		execSync(`git stash pop`);
+		if (stashMsg.includes("Saved working directory and index state")) execSync(`git stash pop`);
 		repo = "";
 	} catch (error) {
 		/* The `catch` block is executed if an error occurs in the `try` block. In this specific case, it is
 	catching any errors that occur during the process of switching branches, pulling changes, and
 	merging changes. */
 		execSync(`git checkout ${feBranch}`);
-		execSync(`git stash pop`);
+		if (stashMsg.includes("Saved working directory and index state")) execSync(`git stash pop`);
 		console.error("Error:", error.message);
 		process.exit(1);
 	}
