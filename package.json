@@ -1,0 +1,17 @@
+{
+  "name": "uc_builder",
+  "version": "1.0.0",
+  "description": "this library is used for creating usecase layout",
+  "main": "UC_Builder.js",
+  "type": "module",
+  "scripts": {
+    "start": "node UC_Builder.js"
+  },
+  "author": "Majid Ali Watto",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "prompt-sync": "^4.2.0",
+    "vue": "^3.3.4"
+  }
+}
