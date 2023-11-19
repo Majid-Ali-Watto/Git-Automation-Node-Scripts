@@ -16,7 +16,7 @@ Prompts the user for input, expecting an action related to Git operations.
 Splits the user input into an array to distinguish the action and UC number.
 Branch Switching and Git Operations:
 
-Defines functions (switchPullMerge and pushChanges) for switching branches, pulling, merging, staging, committing, and pushing changes in Git.
+Defines functions (⁡⁣⁢⁢𝙨𝙬𝙞𝙩𝙘𝙝𝙋𝙪𝙡𝙡𝙈𝙚𝙧𝙜𝙚 𝙖𝙣𝙙 𝙥𝙪𝙨𝙝𝘾𝙝𝙖𝙣𝙜𝙚𝙨⁡) for switching branches, pulling, merging, staging, committing, and pushing changes in Git.
 User Input Handling:
 
 Checks the user input for specific actions ("pull," "push," "pull-all," "push-all") and performs corresponding Git operations.
