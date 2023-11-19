@@ -11,21 +11,23 @@ is assigned to the constant variable `prompt`. This function can be used to disp
 and wait for the user to enter a value. */
 const prompt = promptSync();
 // Array of repositories
+//https://github.com/Majid-Ali-Watto/Git-Automation-Node-Scripts.git
 const UCs = [
-	"crm_oa_brn_uc64_am_fa_mcdf",
-	"crm_oa_brn_uc17_ci_sc_cwhte_inq",
-	"crm_oa_brn_uc16_ci_sc_cwhte_at",
-	"crm_ao_cpu_uc62_fo_cng",
-	"crm_oa_brn_uc55_si_au_ap",
-	"crm_ao_cpu_uc10_fo_cm_npc_inq",
-	"crm_ao_brn_uc24_fo_fa_ci_cei",
-	"crm_ao_cpu_uc15_fo_cm_ec_iq",
-	"crm_ao_brn_uc23_fo_fa_ci_cnpi",
-	"gin_uc14_cifi",
+	"UC_Git",
+	// "crm_oa_brn_uc64_am_fa_mcdf",
+	// "crm_oa_brn_uc17_ci_sc_cwhte_inq",
+	// "crm_oa_brn_uc16_ci_sc_cwhte_at",
+	// "crm_ao_cpu_uc62_fo_cng",
+	// "crm_oa_brn_uc55_si_au_ap",
+	// "crm_ao_cpu_uc10_fo_cm_npc_inq",
+	// "crm_ao_brn_uc24_fo_fa_ci_cei",
+	// "crm_ao_cpu_uc15_fo_cm_ec_iq",
+	// "crm_ao_brn_uc23_fo_fa_ci_cnpi",
+	// "gin_uc14_cifi",
 ];
 // Branches
-const feBranch = "fe";
-const masterBranch = "master";
+const feBranch = "master";
+const masterBranch = "main";
 let repositoryFolder = "";
 // Ask the user for the UC number
 const desiredNumber = prompt("You want to :");
